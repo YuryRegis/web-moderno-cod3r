@@ -1,0 +1,44 @@
+<h1>LISTAS 2</h1>
+
+<h2>PROJETO</h2>
+<ul class="tree">
+    <li><span expandivel>Backend</span></li>
+    <ul>
+        <li><span expandivel>App</span></li>
+        <ul>
+            <li>produto.js</li>
+            <li>usuario.js</li>
+            <li>venda.js</li>
+        </ul>
+        <li><span expandivel>Config</span></li>
+        <ul>
+            <li>banco.js</li>
+            <li>rotas.js</li>
+            <li>servidor.js</li>
+        </ul>
+    </ul>
+    <li><span expandivel>Frontend</span></li>
+    <ul>
+        <li><span expandivel>Public</span></li>
+        <ul>
+            <li>app.css</li>
+            <li>app.js</li>
+            <li>index.html</li>
+        </ul>
+    </ul>
+</ul>
+
+<script type="text/javascript">
+    console.log("arvore")
+    console.log(document.querySelectorAll('[expandivel]'))
+    document.querySelectorAll('[expandivel]').forEach(elemento => {
+        elemento.onclick = evento => {
+            const proximo = elemento.nextElementSibling
+            console.log(proximo)
+            // const display = proximo.style.display
+            // proximo.style.display = (display==='none') ? 'block' : 'none'
+        }
+    })
+</script>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
